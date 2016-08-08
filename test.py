@@ -15,7 +15,7 @@ import mpd
  
 client = mpd.MPDClient()
 client.connect("127.0.0.1", 6600)
-client.play(3) 
+client.play(0) 
 #cs = client.status()
 #print cs['time']
 
@@ -56,7 +56,7 @@ while True:
   loopCheck=0
   cs = client.status()
   if(cs['time'] ==  previousTime):
-   client.play(3)
+   client.play(0)
   else:
    previousTime=cs['time']
   
