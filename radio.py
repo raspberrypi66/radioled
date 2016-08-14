@@ -61,6 +61,9 @@ while True:
    else:
     previousTime=cs['time']
     sleep(1)
+  else:
+   sleep(1)
+   client.play(0)
   
  loopCheck+=1
 
