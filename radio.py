@@ -43,7 +43,7 @@ oled.display()
 
 if(get_ip_address('wlan0')== '192.168.10.1'):
  print "local"
- subprocess.Popen("/root/radioled/startAP.sh")
+ #subprocess.Popen("/root/radioled/startAP.sh")
 
 client.connect("127.0.0.1", 6600)
 client.play(0)                   
@@ -61,7 +61,7 @@ while True:
  if(loopCheck>6):
   loopCheck=0
   cs = client.status()
-  if(cs['time'] is not None):
+  if('time' in cs):
    if(cs['time'] ==  previousTime):
     client.play(0)
    else:
