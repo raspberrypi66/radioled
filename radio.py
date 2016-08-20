@@ -43,7 +43,7 @@ oled.display()
 
 if(get_ip_address('wlan0')== '192.168.10.1'):
  print "local"
- #subprocess.Popen("/root/radioled/startAP.sh")
+ subprocess.Popen("/root/radioled/startAP.sh")
 
 client.connect("127.0.0.1", 6600)
 client.play(0)                   
